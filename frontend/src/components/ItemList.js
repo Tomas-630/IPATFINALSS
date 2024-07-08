@@ -47,7 +47,7 @@ const ItemList = ({ onEdit, onDelete }) => {
                 <ul>
                     {items.map(item => (
                         <li key={item.id}>
-                            {item.first_name} {item.last_name}: {item.address} - {item.phone} - {item.email} - {item.birthday} - {item.birthplace} - {item.age} - {item.gender} - {item.nationality} - {item.civil_status} - {item.religion} - {item.height_CM} - {item.weight_KG} - {item.mother_first_name} {item.mother_middle_name} {item.mother_last_name} - {item.mother_occupation} - {item.father_first_name} {item.father_middle_name} {item.father_last_name} - {item.father_occupation} - {item.primary} - {item.secondary} - {item.tertiary}
+                            {item.first_name} {item.last_name}: {item.address} - {item.phone} - {item.email} - {item.birthday} - {item.bloodtype} - {item.age} - {item.sex} - {item.nationality} - {item.civil_status} - {item.zip_code} - {item.height_CM} - {item.weight_KG} - {item.mother_first_name} {item.mother_middle_name} {item.mother_last_name} - {item.mother_occupation} - {item.father_first_name} {item.father_middle_name} {item.father_last_name} - {item.father_occupation} - {item.primary} - {item.secondary} - {item.College}
                             <button onClick={() => handleEdit(item)}>Edit</button>
                             <button onClick={() => handleDelete(item.id)}>Delete</button>
                         </li>

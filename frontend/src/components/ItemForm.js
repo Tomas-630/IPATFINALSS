@@ -9,12 +9,12 @@ const ItemForm = ({ item, onSuccess }) => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [birthday, setBirthday] = useState('');
-    const [birthplace, setBirthPlace] = useState('');
+    const [bloodtype, setBloodtype] = useState('');
     const [age, setAge] = useState('');
-    const [gender, setGender] = useState('');
+    const [sex, setSex] = useState('');
     const [nationality, setNationality] = useState('');
     const [civil_status, setCivilStatus] = useState('');
-    const [religion, setReligion] = useState('');
+    const [zip_code, setZipcode] = useState('');
     const [height_CM, setHeight] = useState('');
     const [weight_KG, setWeight] = useState('');
     const [momFN, setMomFirstName] = useState('');
@@ -27,7 +27,7 @@ const ItemForm = ({ item, onSuccess }) => {
     const [fathOcc, setFathOccupation] = useState('');
     const [primary, setPrimaryLevel] = useState('');
     const [secondary, setSecondaryLevel] = useState('');
-    const [tertiary, setTertiaryLevel] = useState('');
+    const [college, setCollegeLevel] = useState('');
 
     useEffect(() => {
         if (item) {
@@ -38,12 +38,12 @@ const ItemForm = ({ item, onSuccess }) => {
             setEmail(item.email);
             setPhone(item.phone);
             setBirthday(item.birthday);
-            setBirthPlace(item.birth_place);
+            setBloodtype(item.bloodtype);
             setAge(item.age);
-            setGender(item.gender);
+            setSex(item.Sex);
             setNationality(item.nationality);
             setCivilStatus(item.civil_status);
-            setReligion(item.religion);
+            setZipcode(item.zip_code);
             setHeight(item.height_CM);
             setWeight(item.weight_KG);
             setMomFirstName(item.momFN);
@@ -56,7 +56,7 @@ const ItemForm = ({ item, onSuccess }) => {
             setFathOccupation(item.fathOcc);
             setPrimaryLevel(item.primary);
             setSecondaryLevel(item.secondary);
-            setTertiaryLevel(item.tertiary);
+            setCollegeLevel(item.college);
         }
     }, [item]);
     const handleSubmit = async (event) => {
@@ -69,12 +69,12 @@ const ItemForm = ({ item, onSuccess }) => {
             email,
             phone,
             birthday,
-            birthplace,
+            bloodtype,
             age,
-            gender,
+            sex,
             nationality,
             civil_status,
-            religion,
+            zip_code,
             height_CM,
             weight_KG,
             mother_first_name: momFN,
@@ -87,7 +87,7 @@ const ItemForm = ({ item, onSuccess }) => {
             father_occupation: fathOcc,
             primary,
             secondary,
-            tertiary,
+            college,
 
         };
         try {
@@ -135,15 +135,15 @@ const ItemForm = ({ item, onSuccess }) => {
             </div>
             <div>
                 <label>Place of Birth:</label>
-                <input type="text" value={birthplace} onChange={(e) => setBirthPlace(e.target.value)} />
+                <input type="text" value={bloodtype} onChange={(e) => setBloodtype(e.target.value)} />
             </div>
             <div>
                 <label>Age:</label>
                 <input type="text" value={age} onChange={(e) => setAge(e.target.value)} />
             </div>
             <div>
-                <label>Gender:</label>
-                <input type="text" value={gender} onChange={(e) => setGender(e.target.value)} />
+                <label>sex:</label>
+                <input type="text" value={sex} onChange={(e) => setSex(e.target.value)} />
             </div>
             <div>
                 <label>Nationality:</label>
@@ -154,8 +154,8 @@ const ItemForm = ({ item, onSuccess }) => {
                 <input type="text" value={civil_status} onChange={(e) => setCivilStatus(e.target.value)} />
             </div>
             <div>
-                <label>Religion:</label>
-                <input type="text" value={religion} onChange={(e) => setReligion(e.target.value)} />
+                <label>Zip Code:</label>
+                <input type="text" value={zip_code} onChange={(e) => setZipcode(e.target.value)} />
             </div>
             <div>
                 <label>Height:</label>
@@ -206,8 +206,8 @@ const ItemForm = ({ item, onSuccess }) => {
                 <input type="text" value={secondary} onChange={(e) => setSecondaryLevel(e.target.value)} />
             </div>
             <div>
-                <label>Tertiary Level:</label>
-                <input type="text" value={tertiary} onChange={(e) => setTertiaryLevel(e.target.value)} />
+                <label>College Level:</label>
+                <input type="text" value={college} onChange={(e) => setCollegeLevel(e.target.value)} />
             </div>
 
             <button type="submit">Submit</button>
